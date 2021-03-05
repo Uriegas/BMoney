@@ -9,16 +9,28 @@ class BMoney:
 
     def putMoney(self, money):
         self.money = money
+        return self.money
 
     def __add__(self, m2):
-        return self.money + m2.getMoney()
+        return BMoney(self.money + m2.getMoney())
+    
+    def __sub__(self, other):
+        return BMoney(self.money - other.getMoney())
+    
+    def __mul__(self, other):
+        return BMoney(self.money * other.getMoney())
 
+    def __truediv__(self, other):
+        return BMoney(self.money / other.money)
 
 if __name__ == '__main__':
     dolares = BMoney()
     d1 = BMoney(10.1)
     d2 = BMoney(10)
     print(dolares.getMoney())
-    dolares.madd(d1, d2)
-    print(dolares.getMoney())
+
+    d3 = d1+d2
+    print(d3.getMoney())
+    d3 = d1-d2
+    print(d3.getMoney())
     
