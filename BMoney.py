@@ -48,20 +48,11 @@ if __name__ == '__main__':
         #Save as float
         b = float(input("Enter a float > "))
         #Perform all 7 operations
-        print(a + BMoney(b))
-        print(a - BMoney(b))
-        print(a * BMoney(b))
-        print(a * b)
-        print(a / b)
-
-    '''
-    dolares = BMoney()
-    d1 = BMoney(10.1)
-    d2 = BMoney(10)
-    print(dolares.getMoney())
-
-    d3 = d1+d2
-    print(d3.getMoney())
-    d3 = d1-d2
-    print(d3.getMoney())
-    '''
+        print("float + BMoney: ", a + BMoney(b))
+        print("float - BMoney: ", a - BMoney(b))
+        print("float * BMoney: ", a * b)
+        print("BMoney * BMoney: ", a * BMoney(b))
+        print("BMoney / BMoney: ", a / BMoney(b))
+        print("BMoney / float: ", a / b)
+        print("float / BMoney: ", b / a)
+        print()
