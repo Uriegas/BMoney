@@ -20,6 +20,10 @@ class BMoney:
     def __mul__(self, other):
         return BMoney(self.money * other.getMoney())
 
+    #Multiply instance by float, return float
+    def __mul__(self, other):
+        return self.money * other
+
     #Returns BMoney
     def __truediv__(self, other):
         return BMoney(self.money / other.money)
