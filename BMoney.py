@@ -37,6 +37,9 @@ class BMoney:
     def __rtruediv__(self, other):
         return other / self.money
 
+    def __str__(self):
+        return str(self.money)
+
 ##Main
 if __name__ == '__main__':
     while(True):
