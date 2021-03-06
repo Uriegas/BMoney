@@ -22,7 +22,7 @@ class BMoney:
 
     #Multiply instance by float, return float
     def __mul__(self, other):
-        return self.money * other
+        return other * self.money
 
     #Returns BMoney
     def __truediv__(self, other):
@@ -30,14 +30,28 @@ class BMoney:
     
     #Returns float
     def __truediv__(self, other):
-        return self.money / other.money
+        return self.money / other
     
     #Divides a float by a BMoney instance
     #https://cutt.ly/izyhMOR
     def __rtruediv__(self, other):
         return other / self.money
 
+##Main
 if __name__ == '__main__':
+    while(True):
+        #Save as BMoney
+        a = BMoney(float(input("Enter a num > ")))
+        #Save as float
+        b = float(input("Enter a float > "))
+        #Perform all 7 operations
+        print(a + BMoney(b))
+        print(a - BMoney(b))
+        print(a * BMoney(b))
+        print(a * b)
+        print(a / b)
+
+    '''
     dolares = BMoney()
     d1 = BMoney(10.1)
     d2 = BMoney(10)
@@ -47,4 +61,4 @@ if __name__ == '__main__':
     print(d3.getMoney())
     d3 = d1-d2
     print(d3.getMoney())
-    
+    '''
