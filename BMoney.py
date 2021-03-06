@@ -27,6 +27,11 @@ class BMoney:
     #Returns float
     def __truediv__(self, other):
         return self.money / other.money
+    
+    #Divides a float by a BMoney instance
+    #https://cutt.ly/izyhMOR
+    def __rtruediv__(self, other):
+        return other / self.money
 
 if __name__ == '__main__':
     dolares = BMoney()
